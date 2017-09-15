@@ -6,17 +6,37 @@
     android:layout_height="match_parent"
     tools:context="com.example.natan.firstfragment.MainActivity">
 
-    <fragment
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/simplefragment"
-        class="com.example.natan.firstfragment.SimpleFragment"
+        android:id="@+id/fragmentContainer"
         android:layout_centerInParent="true"
-        tools:layout="@layout/fragment_blank"
+
 
         />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Fragment"
+        android:onClick="clickHandler"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/fragmentContainer"
+        android:layout_toStartOf="@+id/fragmentContainer"
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:onClick="clickHandlerRm"
+        android:text="Remove Fragment"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/fragmentContainer"
+        android:layout_toEndOf="@+id/fragmentContainer" />
 
 
 </RelativeLayout>
