@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         SimpleFragment fragment = new SimpleFragment();
         getSupportFragmentManager()
                 .beginTransaction()
+                .addToBackStack(null)
                 .add(R.id.fragmentContainer,fragment)
                 .commit();
 
